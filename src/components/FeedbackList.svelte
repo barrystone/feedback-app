@@ -10,5 +10,3 @@ import FeedbackItem from "./feedbackItem.svelte";
         <FeedbackItem item={feedback}/>
     {/each}
 </main>
-
-<!-- sds -->
