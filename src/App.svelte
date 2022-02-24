@@ -18,11 +18,16 @@
       text: 'great!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies integer quis auctor elit sed vulputate mi sit amet. Fringilla phasellus faucibus scelerisque eleifend donec.'
     }
   ];
+
+  const deleteFeedback = (e) => {
+    const itemId = e.detail;
+    feedbacks = feedbacks.filter((feedback) => feedback.id !== itemId);
+  };
 </script>
 
 <main>
   <h1>Good!</h1>
-  <FeedBackList {feedbacks} />
+  <FeedBackList {feedbacks} on:delete-feedback={deleteFeedback} />
 </main>
 
 <style>
