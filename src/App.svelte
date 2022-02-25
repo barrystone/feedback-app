@@ -1,4 +1,5 @@
 <script>
+  import FeedbackForm from './components/FeedbackForm.svelte';
   import FeedBackList from './components/FeedbackList.svelte';
   import FeedbackStats from './components/FeedbackStats.svelte';
 
@@ -32,6 +33,7 @@
 </script>
 
 <main class="container">
+  <FeedbackForm />
   <FeedbackStats {count} {ratingAverage} />
   <FeedBackList {feedbacks} on:delete-feedback={deleteFeedback} />
 </main>
