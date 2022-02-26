@@ -22,8 +22,6 @@
 </script>
 
 <Card>
-  <!-- test -->
-  {rating}
   <header>
     <h2>How would you rate your service with us ?</h2>
   </header>
