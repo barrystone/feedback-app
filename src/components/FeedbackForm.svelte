@@ -1,8 +1,10 @@
 <script>
   import Button from './Button.svelte';
   import Card from './Card.svelte';
+  import RatingSelect from './RatingSelect.svelte';
 
   let text = '';
+  let rating = 10;
   let btnDisable = true;
   let min = 10;
   let message;
@@ -16,13 +18,16 @@
       btnDisable = false;
     }
   };
+  const changeRating = (e) => (rating = e.detail);
 </script>
 
 <Card>
+  <!-- test -->
+  {rating}
   <header>
     <h2>How would you rate your service with us ?</h2>
   </header>
-  <!-- Rating select form -->
+  <RatingSelect on:change-rating={changeRating} />
   <form>
     <div class="input-group">
       <input
