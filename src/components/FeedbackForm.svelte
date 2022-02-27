@@ -31,8 +31,8 @@
         rating: +rating
         // rating: Number(rating)
       };
-      console.log(newFeedback);
       dispatch('create-feedback', newFeedback);
+      text = '';
     }
   };
   const changeRating = (e) => (rating = e.detail);
