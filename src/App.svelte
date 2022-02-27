@@ -30,10 +30,16 @@
     const itemId = e.detail;
     feedbacks = feedbacks.filter((feedback) => feedback.id !== itemId);
   };
+
+  const createFeedBack = (e) => {
+    const newFeedback = e.detail;
+    // In there, we can't just push to array.
+    feedbacks = [newFeedback, ...feedbacks];
+  };
 </script>
 
 <main class="container">
-  <FeedbackForm />
+  <FeedbackForm on:create-feedback={createFeedBack} />
   <FeedbackStats {count} {ratingAverage} />
   <FeedBackList {feedbacks} on:delete-feedback={deleteFeedback} />
 </main>
