@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from 'uuid';
+
   import Button from './Button.svelte';
   import Card from './Card.svelte';
   import RatingSelect from './RatingSelect.svelte';
@@ -18,6 +20,17 @@
       btnDisable = false;
     }
   };
+  const handleSubmit = () => {
+    if (text.trim().length > min) {
+      const newFeedback = {
+        id: uuidv4(),
+        text,
+        rating: +rating
+        // rating: Number(rating)
+      };
+      console.log(newFeedback);
+    }
+  };
   const changeRating = (e) => (rating = e.detail);
 </script>
 
@@ -26,7 +39,7 @@
     <h2>How would you rate your service with us ?</h2>
   </header>
   <RatingSelect on:change-rating={changeRating} />
-  <form>
+  <form on:submit|preventDefault={handleSubmit}>
     <div class="input-group">
       <input
         type="text"
