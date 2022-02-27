@@ -41,7 +41,7 @@
 <main class="container">
   <FeedbackForm on:create-feedback={createFeedBack} />
   <FeedbackStats {count} {ratingAverage} />
-  <FeedBackList {feedbacks} on:delete-feedback={deleteFeedback} />
+  <FeedBackList on:delete-feedback={deleteFeedback} />
 </main>
 
 <style>
