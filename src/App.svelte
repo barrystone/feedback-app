@@ -34,7 +34,7 @@
 </script>
 
 <main class="container">
-  <FeedbackForm on:create-feedback={createFeedBack} />
+  <FeedbackForm />
   <FeedbackStats />
   <FeedBackList on:delete-feedback={deleteFeedback} />
 </main>
