@@ -3,6 +3,7 @@
 ## Introduction
 
 This is a Feedback app build by svelte framework.
+App link: https://barrystone.github.io/feedback-app/
 
 - After choose rating and texting word, submit your reply add feedback and showing to public.
 - Also could delete feedback, saw reviews count and rating average.
