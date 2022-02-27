@@ -36,7 +36,7 @@
 <main class="container">
   <FeedbackForm />
   <FeedbackStats />
-  <FeedBackList on:delete-feedback={deleteFeedback} />
+  <FeedBackList />
 </main>
 
 <style>
